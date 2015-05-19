@@ -68,7 +68,8 @@ gulp.task('pre-process', function(){
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: true
+        //server: true,
+        proxy: "127.0.0.1:8000"
     });
 });
 
@@ -92,4 +93,3 @@ gulp.task('default', ['pre-process', 'browser-sync'], function(){
   gulp.watch('sass/*', ['pre-process']);
   gulp.watch('*.html', browserReload);
 });
-
