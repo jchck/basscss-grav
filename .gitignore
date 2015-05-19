@@ -1,4 +1,12 @@
+# From mnml
+
 .sass-cache/
 npm-debug.log
 node_modules
 .DS_Store
+
+# Assets
+css/mnml.css
+/css/mnml.css
+
+/css/mnml.min.css
