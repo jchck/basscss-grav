@@ -5,8 +5,11 @@ npm-debug.log
 node_modules
 .DS_Store
 
-# Assets
-css/mnml.css
-/css/mnml.css
+# Bower
 
+/bower_components
+
+# Assets
+
+/css/mnml.css
 /css/mnml.min.css
