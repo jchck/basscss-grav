@@ -1,0 +1,18 @@
+{
+  "name": "jaechick-mnml",
+  "version": "0.0.0",
+  "authors": [
+    "jaechick <hey@justinchick.com>"
+  ],
+  "description": "A Grav theme made with mnml",
+  "main": "jaechick.php",
+  "license": "MIT",
+  "homepage": "http://justinchick.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
