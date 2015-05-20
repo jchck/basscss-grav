@@ -14,7 +14,5 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "tachyons": "https://github.com/mrmrs/tachyons.git#~1.4.0"
-  }
+  "dependencies": {}
 }
