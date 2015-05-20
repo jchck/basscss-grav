@@ -12,4 +12,4 @@ node_modules
 # Assets
 
 /css/mnml.css
-/css/mnml.min.css
+#/css/mnml.min.css
