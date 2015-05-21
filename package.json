@@ -14,7 +14,6 @@
   },
   "homepage": "https://github.com/jaechick/jaechick-mnml",
   "devDependencies": {
-    "bower": "^1.4.1",
     "browser-sync": "^2.7.2",
     "css": "^2.2.0",
     "css-parse": "^2.0.0",
