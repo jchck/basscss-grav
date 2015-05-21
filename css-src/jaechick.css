@@ -1,6 +1,10 @@
-/*@import './node_modules/tachyons/src/tachyons.css';*/
+body{
+	background: blue;
+}
 
 /* Tachyons */
+
+/*@import './node_modules/tachyons/src/tachyons.css';*/
 
 @import '../node_modules/tachyons/src/_normalize';
 @import '../node_modules/tachyons/src/_media-queries';

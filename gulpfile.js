@@ -29,7 +29,8 @@ gulp.task('css', function() {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(size({gzip: false, showFiles: true, title:'basswork minified'}))
     .pipe(size({gzip: true, showFiles: true, title:'basswork minified'}))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('minify-img', function(){
@@ -44,7 +45,7 @@ gulp.task('minify-img', function(){
 // Use csslint without box-sizing or compatible vendor prefixes (these
 // don't seem to be kept up to date on what to yell about)
 gulp.task('csslint', function(){
-  gulp.src('./css/tachyons.css')
+  gulp.src('./css-src/jaechick.min.css')
     .pipe(csslint({
           'compatible-vendor-prefixes': false,
           'box-sizing': false,
@@ -79,7 +80,7 @@ function swallowError(error) {
 
 */
 gulp.task('default', ['css', 'browser-sync'], function(){
-  gulp.start('csslint', 'minify-img');
-  gulp.watch('css-src/*');
+  gulp.start('css', 'csslint', 'minify-img');
+  gulp.watch('css-src/*', ['css']);
   gulp.watch('templates/*', browserReload);
 });
