@@ -82,5 +82,5 @@ function swallowError(error) {
 gulp.task('default', ['css', 'browser-sync'], function(){
   gulp.start('css', 'csslint', 'minify-img');
   gulp.watch('css-src/*', ['css']);
-  gulp.watch('templates/*', browserReload);
+  gulp.watch('**/*.html.twig', browserReload);
 });
