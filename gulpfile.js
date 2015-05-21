@@ -1,4 +1,4 @@
-// Gulp tasks for MNML
+// Gulp tasks for jchck mnml
 
 // Load plugins
 var gulp = require('gulp'),
@@ -6,21 +6,17 @@ var gulp = require('gulp'),
     basswork = require('gulp-basswork'),
     rename = require('gulp-rename'),
     css = require('css'),
-
     watch = require('gulp-watch'),
-    prefix = require('gulp-autoprefixer'),
     size = require('gulp-size'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
     minifyCSS = require('gulp-minify-css'),
-    sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
     browserSync = require('browser-sync').create('mnml'),
     browserReload = browserSync.reload;
 
 gulp.task('css', function() {
   gulp.src('./css-src/jaechick.css')
-  //gulp.src('./node_modules/tachyons/src/tachyons.css')
     .pipe(basswork())
     .pipe(size({gzip: false, showFiles: true, title:'basswork css'}))
     .pipe(size({gzip: true, showFiles: true, title:'basswork gzipped css'}))
@@ -59,12 +55,13 @@ gulp.task('csslint', function(){
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
     browserSync.init({
-        //server: true
+        // Be sure you start your dev server at the root of your Grav install
+        // `$ php -S 127.0.0.1:8000`
         proxy: "127.0.0.1:8000"
     });
 });
 
-// Allows gulp to not break after a sass error.
+// Allows gulp to not break after an error.
 // Spits error out to console
 function swallowError(error) {
   console.log(error.toString());
@@ -74,9 +71,9 @@ function swallowError(error) {
 /*
    DEFAULT TASK
 
- • Process sass then auto-prefixes and lints outputted css
+ • Process css and lints outputted css
  • Starts a server on port 3000
- • Reloads browsers when you change html or sass files
+ • Reloads browsers when you change html.twig or css files
 
 */
 gulp.task('default', ['css', 'browser-sync'], function(){
