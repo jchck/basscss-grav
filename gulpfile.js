@@ -19,7 +19,8 @@ var gulp = require('gulp'),
     browserReload = browserSync.reload;
 
 gulp.task('css', function() {
-  gulp.src('./node_modules/tachyons/src/tachyons.css')
+  gulp.src('./css-src/jaechick.css')
+  //gulp.src('./node_modules/tachyons/src/tachyons.css')
     .pipe(basswork())
     .pipe(size({gzip: false, showFiles: true, title:'basswork css'}))
     .pipe(size({gzip: true, showFiles: true, title:'basswork gzipped css'}))
@@ -57,7 +58,8 @@ gulp.task('csslint', function(){
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: true
+        //server: true
+        proxy: "127.0.0.1:8000"
     });
 });
 
@@ -78,6 +80,6 @@ function swallowError(error) {
 */
 gulp.task('default', ['css', 'browser-sync'], function(){
   gulp.start('csslint', 'minify-img');
-  gulp.watch('src/*', ['pre-process']);
-  gulp.watch('*.html', browserReload);
+  gulp.watch('css-src/*');
+  gulp.watch('templates/*', browserReload);
 });
