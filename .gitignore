@@ -1,15 +1,11 @@
-# From mnml
-
-.sass-cache/
+# Node
 npm-debug.log
 node_modules
+
+# OSX
 .DS_Store
 
-# Bower
-
-/bower_components
-
 # Assets
-
 /css/mnml.css
 #/css/mnml.min.css
+fonts
