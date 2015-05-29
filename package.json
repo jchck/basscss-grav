@@ -1,7 +1,7 @@
 {
   "name": "jaechick",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Grav theme made with Basscss",
   "main": "jaechick.php",
   "repository": {
     "type": "git",
@@ -58,24 +58,15 @@
     "flex-object": "latest"
   },
   "devDependencies": {
-    "browser-sync": "^2.7.2",
-    "css": "^2.2.0",
-    "css-parse": "^2.0.0",
-    "css-statistics": "^0.1.0",
-    "event-stream": "^3.3.1",
-    "gulp": "^3.8.11",
-    "gulp-basswork": "^0.2.0",
-    "gulp-csslint": "^0.1.5",
-    "gulp-file-include": "^0.9.0",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-minify-css": "^1.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-shell": "^0.4.1",
-    "gulp-size": "^1.2.1",
-    "gulp-uncss": "^1.0.1",
-    "gulp-util": "^3.0.4",
-    "gulp-watch": "^4.2.4",
-    "lodash": "^3.9.1",
-    "node-sass": "^3.1.1"
+    "cssnext": "^1.1.0",
+    "http-server": "^0.8.0",
+    "watch": "^0.14.0"
+  },
+  "scripts": {
+    "css": "cssnext src/base.css css/base.css",
+    "minify:css": "cssnext -c src/base.css css/base.min.css",
+    "watch:css": "watch 'npm run css && npm run minify:css' ./src",
+    "serve": "http-server",
+    "start": "npm run watch:css & npm run serve"
   }
 }
