@@ -8145,6 +8145,18 @@ img {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'saya_fylight';
+  src: url('../fonts/sayafy-light-webfont.eot');
+  src: url('../fonts/sayafy-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sayafy-light-webfont.woff2') format('woff2'),
+         url('../fonts/sayafy-light-webfont.woff') format('woff'),
+         url('../fonts/sayafy-light-webfont.ttf') format('truetype'),
+         url('../fonts/sayafy-light-webfont.svg#saya_fylight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'saya_fymedium', serif;
+  font-family: 'saya_fylight', serif;
 }
