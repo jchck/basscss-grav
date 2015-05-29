@@ -6,6 +6,6 @@ node_modules
 .DS_Store
 
 # Assets
-/css/mnml.css
-#/css/mnml.min.css
+/css/base.css
+#/css/base.min.css
 fonts
