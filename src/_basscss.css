@@ -30,7 +30,7 @@
 
 
 /* Optional Modules (not included in Basscss by default) */
-/*
+
 @import '../node_modules/basscss-media-object';
 @import '../node_modules/basscss-responsive-white-space';
 @import '../node_modules/basscss-utility-headings';
@@ -48,4 +48,3 @@
 @import '../node_modules/basscss-button-nav-tab';
 @import '../node_modules/basscss-highlight-dark';
 @import '../node_modules/basscss-highlight';
-*/
