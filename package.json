@@ -68,15 +68,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-size": "^1.2.1",
     "gulp-util": "^3.0.4",
-    "gulp-watch": "^4.2.4",
-    "http-server": "^0.8.0",
-    "watch": "^0.14.0"
-  },
-  "scripts": {
-    "css": "cssnext src/base.css css/base.css",
-    "minify:css": "cssnext -c src/base.css css/base.min.css",
-    "watch:css": "watch 'npm run css && npm run minify:css' ./src",
-    "serve": "http-server",
-    "start": "npm run watch:css"
+    "gulp-watch": "^4.2.4"
   }
 }
