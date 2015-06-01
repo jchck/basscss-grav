@@ -1,35 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if header.description %}
-        <meta name="description" content="{{ header.description }}">
-        {% else %}
-        <meta name="description" content="{{ site.description }}">
-    {% endif %}
-
-    {% if header.robots %}
-    <meta name="robots" content="{{ header.robots }}">
-    {% endif %}
-    <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
-    <title>
-      {% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}
-    </title>
-    <meta name="author" content="jaechick">
-    
-    {% do assets.add('theme://css/jchck.css',101) %}
-    {{ assets.css() }}
+    {% include 'partials/head.html.twig' %}
   </head>
   <body>
-    <!-- Replace this with your own content -->
-    <div class="flex flex-center p2" style="min-height: 500px;">
-      <div class="mx-auto">
-        <p style="text-align: center;">welcome to jchck<br><br>
-        <small>a <a href="http://getgrav.org" target="_blank">Grav</a> theme made with <a href="http://www.basscss.com/" target="_blank">Basscss</a></small>
-        </p>
+    {% include 'partials/header.html.twig' %}
+    
+    <section class="clearfix mx2n">
+      <div class="col-6 px2 mx-auto rounded">
+        <h2 class="center h2 h0-responsive caps mt0 mb0 regular">jchck mnml</h2>
       </div>
-    </div>
+    </section>
+
+    {% include 'partials/home-3up.html.twig' %}
   </body>
 </html>

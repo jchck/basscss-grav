@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if header.description %}
+    <meta name="description" content="{{ header.description }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+{% endif %}
+
+{% if header.robots %}
+<meta name="robots" content="{{ header.robots }}">
+{% endif %}
+<link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
+<title>
+  {% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}
+</title>
+<meta name="author" content="jaechick">
+
+{% do assets.add('theme://css/jchck.css',101) %}
+{% do assets.add('https://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.min.css', 90) %}
+{{ assets.css() }}
