@@ -38,6 +38,13 @@
 
 }
 
-body{
-	font-family: 'saya_fylight', serif;
+@font-face {
+    font-family: 'gotham_lightregular';
+    src: url('../fonts/gotham-light/ufonts.com_gotham-light-webfont.eot');
+    src: url('../fonts/gotham-light/ufonts.com_gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-light/ufonts.com_gotham-light-webfont.woff') format('woff'),
+         url('../fonts/gotham-light/ufonts.com_gotham-light-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-light/ufonts.com_gotham-light-webfont.svg#gotham_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
