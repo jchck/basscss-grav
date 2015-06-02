@@ -1,3 +1,4 @@
 :root{
-	--font-family: "gotham_lightregular", serif;
+	--font-family: 'Roboto Mono';
+	--heading-font-family: 'gotham_lightregular', serif;
 }

@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 gulp.task('css', function() {
   gulp.src('./src/base.css')
     .pipe(basswork())
-    .pipe(cssnext({compress: false}))
+    .pipe(cssnext({compress: true}))
     .pipe(rename({basename: 'jchck'}))
     .pipe(size({gzip: false, showFiles: true, title:'basswork css'}))
     .pipe(size({gzip: true, showFiles: true, title:'basswork gzipped css'}))

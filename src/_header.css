@@ -1,0 +1,17 @@
+header{
+	background-attachment: fixed;
+	position: relative;
+	/*height: 300px;*/
+}
+
+header:after{
+		content: '';
+		background: url('http://justinchick.com/wp-content/themes/my-site/assets/img/bg/8.jpg') no-repeat fixed center bottom;
+		background-size: cover; 
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
