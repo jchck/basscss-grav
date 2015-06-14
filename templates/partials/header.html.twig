@@ -1,19 +1,25 @@
-<header class="center white">
-  <div >
-    <nav class="clearfix black">
-      <div class="sm-col">
-        <a href="/" class="button py-2 button-transparent">About</a>
-        <a href="/" class="button py-2 button-transparent">Notebook</a>
-        <a href="/" class="button py-2 button-transparent">Subscribe</a>
-        <a href="/" class="button py-2 button-transparent">Contact</a>
-      </div>
-      <div class="sm-col-right">
-        <a href="/" class="button py-2 button-transparent">Home</a>
-      </div>
-    </nav>
+<header class="container center py1 md-py4">
+  <a href="/" class="relative inline-block">
+    <img src="{{ url("theme://img/logo.svg") }}" class="half-width"></img>
+  </a>
+  <div class="clearfix mt2">
+    <div class="md-col-6 sm-col-8 px-2 mx-auto">
+      <p class="h3 mb0">Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare
+adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+      <nav class="mt2 h6">
+        <a href="/" class="button button-narrow button-outline">About</a>
+        <a href="/" class="button button-narrow button-outline">Notebook</a>
+        <a href="/" class="button button-narrow button-outline">Subscribe</a>
+        <a href="/" class="button button-narrow button-outline">Contact</a>
+      </nav>
+    </div>
   </div>
-
-  <h1 class="h1 h0-responsive caps mt4 mb0 regular">jchck mnml</h1>
-  <p class="h3">Sloppy Jaloppy</p>
-  <a href="/" class="h3 button button-big mb4">Let's Do It!</a>
 </header>
+
+<div class="center white bg-gray bg-cover bg-center bg-blue" style="background-image: url('{{ url("theme://img/far-rock-away.png") }}')">
+  <h3 class="h2 h0-responsive caps mt0 mb0 regular">latest post title</h3>
+  <div class="container">
+    <p class="h3 mb0">Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+  </div>
+  <a href="/" class="h3 button button-big mt2 mb2 bg-black">Read On</a>
+</div>
