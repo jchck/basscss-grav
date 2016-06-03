@@ -1,5 +1,7 @@
 // Gulp tasks for jchck grav
 
+var devUrl            =   'http://192.168.33.10';
+
 // Load plugins
 var autoprefixer      =   require('autoprefixer');
 var browserSync       =   require('browser-sync').create();
@@ -56,12 +58,21 @@ gulp.task('pics', function(){
 
 // Initialize browser-sync which starts a static server also allows for
 // browsers to reload on filesave
-gulp.task('browser-sync', function() {
+gulp.task('watch', function() {
     browserSync.init({
+
         // Be sure you start your dev server at the root of your Grav install
-        // `$ php -S 127.0.0.1:8000`
-        proxy: "127.0.0.1:8000"
+        proxy: devUrl,
+
+        // Template files to watch 
+        files: [
+          '{templates}/**/*.html.twig',
+          '*.php'
+        ]
     });
+
+    // CSS files to watch
+    gulp.watch(['./src/css/**.css'], ['css']);
 });
 
 // Allows gulp to not break after an error.

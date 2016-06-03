@@ -1,0 +1,91 @@
+:root{
+	/**
+	 *
+	 * All of our variables
+	 * First with Basscss default
+	 * Followed by project specifics
+	 *
+	 */
+
+	--base-font-size: 1.155em;
+	
+	--h1: 2rem;
+	--h2: 1.5rem;
+	--h3: 1.25rem;
+	--h4: 1rem;
+	--h5: .875rem;
+	--h6: .75rem;
+
+	--line-height-1: 1;
+	--line-height-2: 1.125;
+	--line-height-3: 1.25;
+	--line-height-4: 1.5;
+	--letter-spacing: 1;
+	--caps-letter-spacing: .2em;
+	--bold-font-weight: 900;
+
+	--width-1: 24rem;
+	--width-2: 32rem;
+	--width-3: 48rem;
+	--width-4: 64rem;
+
+	--space-1: .5rem;
+	--space-2: 1rem;
+	--space-3: 2rem;
+	--space-4: 4rem;
+
+	--media-object-space: var(--space-1);
+
+	--z1: 1;
+	--z2: 2;
+	--z3: 3;
+	--z4: 4;
+
+	--border-width: .25rem;
+	--border-radius: 3px;
+
+	--form-field-padding-x: .5rem;
+	--form-field-padding-y: .5rem;
+	--form-field-height: 2.25rem;
+
+	--darken-1: rgba(0, 0, 0, .0625);
+	--darken-2: rgba(0, 0, 0, .125);
+	--darken-3: rgba(0, 0, 0, .25);
+	--darken-4: rgba(0, 0, 0, .5);
+
+	--lighten-1: rgba(255, 255, 255, .0625);
+	--lighten-2: rgba(255, 255, 255, .125);
+	--lighten-3: rgba(255, 255, 255, .25);
+	--lighten-4: rgba(255, 255, 255, .5);
+
+	--range-thumb-width: var(--form-field-padding-x);
+	--range-thumb-height: calc( var(--form-field-height) - (var(--form-field-padding-y) * 2) );
+	--range-track-height: calc( var(--form-field-padding-y) / 2 );
+	--range-thumb-offset: calc( var(--range-thumb-height) / -2 + (var(--range-track-height) / 2) );
+	--range-thumb-pseudo-size: var(--form-field-height);
+
+	--button-font-family: inherit;
+	--button-font-size: inherit;
+	--button-font-weight: var(--bold-font-weight);
+	--button-line-height: 1.125rem;
+	--button-padding-y: .5rem;
+	--button-padding-x: 1rem;
+
+	--white: #f5f5f5;
+	--black: #4c4c4c;
+	--red: #F5586A;
+	--orange: #F59958;
+	--blue: #0074D9;
+	--color: var(--blue);
+	--color-hover: var(--red);
+	--button-color: #fff;
+	--button-background-color: var(--color);
+
+	--button-small-padding-y: .25rem;
+	--button-small-padding-x: .5rem;
+	--button-big-padding-y: 1rem;
+	--button-big-padding-x: 1.25rem;
+	--button-narrow-padding-x: .5rem;
+
+	--transition: all 0.3s ease-in-out;
+}
