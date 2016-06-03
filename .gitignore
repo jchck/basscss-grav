@@ -6,8 +6,7 @@ node_modules
 .DS_Store
 
 # Assets
-/css/base.css
-#/css/base.min.css
+/dest/
 fonts
 img/logo.svg
 projects.md
