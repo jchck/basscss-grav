@@ -3,6 +3,6 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Jchck extends Theme{
+class BasscssGrav extends Theme{
 	
 }
