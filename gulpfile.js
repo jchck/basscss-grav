@@ -33,13 +33,13 @@ var postcssPlugins    =   [
 ];
 
 gulp.task('css', function() {
-  gulp.src('./src/base.css')
+  gulp.src('./src/css/base.css')
    
    .pipe(postcss(postcssPlugins))
 
    .pipe(size({gzip: true, showFiles: true, title: 'Processed & gZipped!'}))
 
-   .pipe(gulp.dest('./dest'))
+   .pipe(gulp.dest('./dest/css'))
 
    .pipe(browserSync.stream());
 });
