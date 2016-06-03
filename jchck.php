@@ -3,6 +3,6 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Jaechick extends Theme{
+class Jchck extends Theme{
 	
 }
