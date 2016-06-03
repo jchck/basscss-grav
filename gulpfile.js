@@ -32,6 +32,7 @@ var postcssPlugins    =   [
     mqpacker
 ];
 
+// css processing task
 gulp.task('css', function() {
   gulp.src('./src/css/base.css')
    
@@ -44,13 +45,13 @@ gulp.task('css', function() {
    .pipe(browserSync.stream());
 });
 
-gulp.task('minify-img', function(){
-  gulp.src('./img/*')
+// image processing task
+gulp.task('pics', function(){
+  gulp.src('./src/img/**.*')
     .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
+        verbose: true
     }))
-    .pipe(gulp.dest('./img/'));
+    .pipe(gulp.dest('./dest/img/'));
 });
 
 // Initialize browser-sync which starts a static server also allows for
