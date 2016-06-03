@@ -36,7 +36,7 @@ var postcssPlugins    =   [
 
 // css processing task
 gulp.task('css', function() {
-  gulp.src('./src/css/base.css')
+  gulp.src('./src/css/basecss.css')
    
    .pipe(postcss(postcssPlugins))
 
