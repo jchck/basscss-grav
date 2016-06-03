@@ -1,20 +1,14 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 {% if header.description %}
-    <meta name="description" content="{{ header.description }}">
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
+	<meta name="description" content="{{ header.description }}">
+{% else %}
+	<meta name="description" content="">
 {% endif %}
-
-{% if header.robots %}
-<meta name="robots" content="{{ header.robots }}">
-{% endif %}
-<link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
-<title>
-  {% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}
-</title>
-<meta name="author" content="jaechick">
-
-{% do assets.add('theme://dest/css/base.css',100) %}
-{{ assets.css() }}
+	<meta name="author" content="jchck">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+	{% do assets.add('theme://dest/css/base.css',100) %}
+	{{ assets.css() }}
+</head>
