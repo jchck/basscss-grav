@@ -75,23 +75,14 @@ gulp.task('watch', function() {
     gulp.watch(['./src/css/**.css'], ['css']);
 });
 
-// Allows gulp to not break after an error.
-// Spits error out to console
-function swallowError(error) {
-  console.log(error.toString());
-  this.emit('end');
-}
-
-/*
-   DEFAULT TASK
-
- • Process css and lints outputted css
- • Starts a server on port 3000
- • Reloads browsers when you change html.twig or css files
-
-*/
-gulp.task('default', ['css', 'browser-sync'], function(){
-  gulp.start('css', 'minify-img');
-  gulp.watch('src/*', ['css']);
+/**
+ *
+ * Default task
+ *
+ */
+gulp.task('default', ['css', 'watch'], function(){
+  gulp.start('css', 'pics');
+  gulp.watch('src/css/**.css', ['css']);
+  gulp.watch('src/img/**.*', ['img']);
   gulp.watch('**/*.html.twig', browserReload);
 });
