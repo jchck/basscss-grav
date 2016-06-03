@@ -1,28 +1,47 @@
-// Gulp tasks for jchck mnml
+// Gulp tasks for jchck grav
 
 // Load plugins
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    basswork = require('gulp-basswork'),
-    rename = require('gulp-rename'),
-    css = require('css'),
-    cssnext = require('gulp-cssnext'),
-    watch = require('gulp-watch'),
-    size = require('gulp-size'),
-    rename = require('gulp-rename'),
-    imagemin = require('gulp-imagemin'),
-    browserSync = require('browser-sync'),
-    browserReload = browserSync.reload;
+var autoprefixer      =   require('autoprefixer');
+var browserSync       =   require('browser-sync').create();
+var browserReload     =   browserSync.reload;
+var mqpacker          =   require('css-mqpacker');
+var cssnano           =   require('cssnano');
+var gulp              =   require('gulp');
+var imagemin          =   require('gulp-imagemin');
+var postcss           =   require('gulp-postcss');
+var size              =   require('gulp-size');
+var uncss             =   require('gulp-uncss');
+var watch             =   require('gulp-watch');
+var calc              =   require('postcss-calc');
+var color             =   require('postcss-color-function');
+var media             =   require('postcss-custom-media');
+var properties        =   require('postcss-custom-properties');
+var comments          =   require('postcss-discard-comments');
+var atImport          =   require('postcss-import');
+
+// postcss plugin registry
+var postcssPlugins    =   [
+    atImport,
+    media,
+    properties,
+    calc,
+    color,
+    comments,
+    autoprefixer,
+    cssnano,
+    mqpacker
+];
 
 gulp.task('css', function() {
   gulp.src('./src/base.css')
-    .pipe(basswork())
-    .pipe(cssnext({compress: true}))
-    .pipe(rename({basename: 'jchck'}))
-    .pipe(size({gzip: false, showFiles: true, title:'basswork css'}))
-    .pipe(size({gzip: true, showFiles: true, title:'basswork gzipped css'}))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+   
+   .pipe(postcss(postcssPlugins))
+
+   .pipe(size({gzip: true, showFiles: true, title: 'Processed & gZipped!'}))
+
+   .pipe(gulp.dest('./dest'))
+
+   .pipe(browserSync.stream());
 });
 
 gulp.task('minify-img', function(){
