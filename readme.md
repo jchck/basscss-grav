@@ -6,9 +6,13 @@ An empty [Grav](http://getgrav.org) theme made made with [Basscss](https://githu
 
 ```
 $ git clone https://github.com/jchck/basscss-grav.git project-name && cd project-name
+$ rm -rf .git
 $ npm install
 $ gulp
 ```
+
+## Author
+[jchck](http://jstn.ch/ck)
 
 # License
 
