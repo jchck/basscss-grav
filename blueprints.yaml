@@ -1,0 +1,11 @@
+name: Basscss Grav
+version: 1.0.0
+description: "Just a [Basscss](http://www.basscss.com/) boilerplate to start your Grav project with"
+author:
+	name: jchck
+	email: hey@justinchick.com
+	url: http://jstn.ch/ck
+homepage: https://github.com/jchck/basscss-grav
+keywords: basscss, oocss, responsive, fast, modern
+bugs: https://github.com/jchck/basscss-grav/issues
+license: MIT
