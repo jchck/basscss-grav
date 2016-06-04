@@ -1,6 +1,22 @@
 # Basscss Grav
 
-An empty [Grav](http://getgrav.org) theme made made with [Basscss](https://github.com/basscss/basscss)
+Just a [Basscss](https://github.com/basscss/basscss) boilerplate to start your [Grav](http://getgrav.org) project with.
+
+## Features
+
++ Basscss
++ Gulp.js build process
++ PostCss
++ BrowserSync
++ Image optimization
+
+## Requirements
+
+| Prerequisite    | How to check | How to install
+| --------------- | ------------ | ------------- |
+| PHP >= 5.4.x    | `php -v`     | [php.net](http://php.net/manual/en/install.php) |
+| Node.js 0.12.x  | `node -v`    | [nodejs.org](http://nodejs.org/) |
+| gulp >= 3.8.10  | `gulp -v`    | `npm install -g gulp` |
 
 ## Install
 
